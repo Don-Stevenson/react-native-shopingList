@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Header from './components/Header'
+import uuid from 'uuidv4'
 
 const App = () => {
+  const [items, setItems] = useState([{}])
+
   return (
     <View style={styles.container}>
       <Header />

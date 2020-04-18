@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import Header from './components/Header'
 import uuid from 'uuidv4'
 
@@ -8,12 +8,13 @@ const App = () => {
     {id: uuid(), text: 'Milk'},
     {id: uuid(), text: 'Eggs'},
     {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Juice'}
+    {id: uuid(), text: 'Juice'},
   ])
 
   return (
     <View style={styles.container}>
       <Header />
+      <FlatList />
     </View>
   );
 };

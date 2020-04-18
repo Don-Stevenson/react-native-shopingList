@@ -14,7 +14,8 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <FlatList />
+      <FlatList date={items} 
+      renderItem={({item }) => <Text>{item.text}</Text>}/>
     </View>
   );
 };

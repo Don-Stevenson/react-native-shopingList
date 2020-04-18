@@ -4,7 +4,12 @@ import Header from './components/Header'
 import uuid from 'uuidv4'
 
 const App = () => {
-  const [items, setItems] = useState([{}])
+  const [items, setItems] = useState([
+    {id: uuid(), text: 'Milk'},
+    {id: uuid(), text: 'Eggs'},
+    {id: uuid(), text: 'Bread'},
+    {id: uuid(), text: 'Juice'}
+  ])
 
   return (
     <View style={styles.container}>

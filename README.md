@@ -1,7 +1,7 @@
 # react-native-shopingList
 a react native shopping list built for android.  Built to learn about React Native.
 
-##Install dependencies
+## Install dependencies
 npm install
 cd ios && pod install && cd ...
 

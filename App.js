@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
-import {uuid} from "uuidv4";
+import { View, Text, StyleSheet, FlatList, Alert } from "react-native";
+import { uuid } from "uuidv4";
 import Header from "./components/Header";
 import ListItem from "./components/ListItem";
 import AddItem from "./components/AddItem";
@@ -19,11 +19,15 @@ const App = () => {
     });
   };
 
-  const addItem = (item) => {
-    setItems(prevItems=> {
-      return [{id:uuid(), text},...prevItems]
-    })
-  }
+  const addItem = item => {
+    if (!text) {
+      Alert.alert("Error", "Please enter an item", { text: "Ok" });
+    } else {
+      setItems(prevItems => {
+        return [{ id: uuid(), text }, ...prevItems];
+      });
+    }
+  };
   return (
     <View style={styles.container}>
       <Header />

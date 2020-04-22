@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
+import {uuid} from "uuidv4";
 import Header from "./components/Header";
 import ListItem from "./components/ListItem";
-import uuid from "uuidv4";
+import AddItem from "./components/AddItem";
 
 const App = () => {
   const [items, setItems] = useState([
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
+      <AddItem />
       <FlatList
         date={items}
         renderItem={({ item }) => (

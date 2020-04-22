@@ -18,10 +18,16 @@ const App = () => {
       return prevItems.filter(item => item.id != id);
     });
   };
+
+  const addItem = (item) => {
+    setItems(prevItems=> {
+      return [{id:uuid(), text},...prevItems]
+    })
+  }
   return (
     <View style={styles.container}>
       <Header />
-      <AddItem />
+      <AddItem addItem={addItem} />
       <FlatList
         date={items}
         renderItem={({ item }) => (

@@ -1,5 +1,5 @@
 # react-native-shopingList
-a react native shopping list app built for android.  This project was undertaken to learn about React Native.
+A react native shopping list app built for android.  This project was undertaken to learn about React Native.
 
 ## Install dependencies
 npm install
